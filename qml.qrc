@@ -7,5 +7,19 @@
         <file>images/button.png</file>
         <file>images/main1.jpg</file>
         <file>GamingSwipeMenu.qml</file>
+        <file>images/2ndpage.jpg</file>
+        <file>images/button2.png</file>
+        <file>images/buttonsdrugom.png</file>
+        <file>SecondPage.qml</file>
+        <file>NoFriends.qml</file>
+        <file>images/noFriends.jpg</file>
+        <file>images/emptyButton.png</file>
+        <file>ThirdPage.qml</file>
+        <file>images/3rdpage.jpg</file>
+        <file>images/allvars.png</file>
+        <file>images/buttonconnect.png</file>
+        <file>images/buttonget.png</file>
+        <file>FinalPage.qml</file>
+        <file>images/finalPage.jpg</file>
     </qresource>
 </RCC>

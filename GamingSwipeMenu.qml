@@ -5,9 +5,23 @@ Item {
     SwipeView{
         id:gamingMenu
         anchors.fill: parent
-        Rectangle{
-            color: "white"
+        SecondPage{
+            id:secondPage
         }
+        /*NoFriends{
+            id:noFriends
+        }*/
+    }
+
+    PageIndicator {
+        id: indicator
+
+
+        count: gamingMenu.count
+        currentIndex: mainMenu.currentIndex
+
+        anchors.bottom: gamingMenu.bottom
+        anchors.horizontalCenter: parent.horizontalCenter
     }
 
 }

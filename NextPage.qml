@@ -26,7 +26,7 @@ Item {
             onReleased: {parent.scale = 1;
                          }
 
-            onClicked: {mainStack.push("GamingSwipeMenu.qml")}
+            onClicked: {mainStack.push("FinalPage.qml")}
         }
         Behavior on scale{
             PropertyAnimation{

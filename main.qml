@@ -20,12 +20,10 @@ Window {
             NextPage{
                 id:nextPage
             }
+            NoFriends{
+                        id:noFriends
+                    }
         }
-
-        /*SwipeView{
-            id:gamingMenu
-            anchors.fill:parent
-        }*/
 
         PageIndicator {
             id: indicator
