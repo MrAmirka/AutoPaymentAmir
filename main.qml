@@ -8,17 +8,34 @@ Window {
     height: 720
     title: qsTr("Hello World")
 
-    SwipeView{
+    StackView{
+        anchors.fill: parent
         id:mainStack
-        anchors.fill:parent
-        HomePage{
-            id:homePage
+        SwipeView{
+            id:mainMenu
+            anchors.fill:parent
+            HomePage{
+                id:homePage
+            }
+            NextPage{
+                id:nextPage
+            }
         }
-        NextPage{
-            id:nextPage
+
+        /*SwipeView{
+            id:gamingMenu
+            anchors.fill:parent
+        }*/
+
+        PageIndicator {
+            id: indicator
+
+
+            count: mainMenu.count
+            currentIndex: mainMenu.currentIndex
+
+            anchors.bottom: mainMenu.bottom
+            anchors.horizontalCenter: parent.horizontalCenter
         }
     }
-
-
-
 }

@@ -6,7 +6,7 @@ Item {
     id:homePage
     Image{
         id:mainImg
-        source:"images/main.jpg"
+        source:"images/main1.jpg"
         width:parent.width
         height:parent.height
     }

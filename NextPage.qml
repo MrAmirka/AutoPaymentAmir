@@ -4,19 +4,46 @@ import QtQuick.Controls 2.2
 
 Item {
     id:nextPage
-    Rectangle{
-        id:rect
-        color: "#00b956"
-        anchors.fill:parent
-        Text{
+    Image{
+        id:mainImg
+        source:"images/1stpage.jpg"
+        width:parent.width
+        height:parent.height
+    }
+    Image{
+        id:button
+        source:"images/button.png"
+        x:parent.width/2-width/2
+        y:(parent.height/2-height/2)+55
+        width:0.27*650
+        height:0.27*650
 
-            text:"В ходе игры мы попытаемся определить Ваш психотип\r и подобрать соответствующий автоплатёж"
-            color: "#ffffff"
-            font.pointSize: 12
-            font.family:"GT Walshem Pro"
-            x:parent.width/2-width/2
-            y:parent.height-parent.height/4
+        MouseArea{
+            id:mouseArea
+            anchors.fill:parent
+            onPressed: {parent.scale = 0.9;
+                        animation.pause()}
+            onReleased: {parent.scale = 1;
+                         }
+
+            onClicked: {mainStack.push("GamingSwipeMenu.qml")}
         }
+        Behavior on scale{
+            PropertyAnimation{
+                duration:100
+            }
+        }
+
+        SequentialAnimation on scale{
+               id:animation
+               running: true
+               NumberAnimation { from:1; to: 1.1; duration: 500 }
+               NumberAnimation { from:1.1; to: 1; duration: 1000 }
+               NumberAnimation { from:1; to: 1.1; duration: 500 }
+               NumberAnimation { from:1.1; to: 1; duration: 1000 }
+               NumberAnimation { from:1; to: 1; duration: 750 }
+               loops:Animation.Infinite
+           }
     }
 }
 

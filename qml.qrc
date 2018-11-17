@@ -2,7 +2,10 @@
     <qresource prefix="/">
         <file>main.qml</file>
         <file>HomePage.qml</file>
-        <file>images/main.jpg</file>
         <file>NextPage.qml</file>
+        <file>images/1stpage.jpg</file>
+        <file>images/button.png</file>
+        <file>images/main1.jpg</file>
+        <file>GamingSwipeMenu.qml</file>
     </qresource>
 </RCC>
